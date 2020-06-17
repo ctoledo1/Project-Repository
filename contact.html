@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<style>
+    body{
+        background-color: #94B3AF ;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:#94B3AF;
+}
+</style>
+<body>
+
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="ourstory.html">Our Story</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <br>
+
+  <form>
+      <fieldset> 
+          <legend>Contact Us:</legend>
+          <lable for ="Name">Name:</lable>
+          <input
+          type="text"
+          id="Name"
+          name="name"
+          maxlength="100"
+          placeholder="Enter your name here"
+          />
+          <br>
+          <lable for="email">Email Address:</lable>
+          <input
+          type="text"
+          id="Email adress"
+          name="Email"
+          maxlength="100"
+          placeholder="Enter your email adress here"
+          />
+  <br>
+  <div>
+      <div>
+          <label for ="comments">Message:</label>
+      </div>
+      <div>
+          <textarea
+          id="comments"
+          name="comments"
+          rows="5"
+          columns="25"
+          placeholder="Enter your message here..."></textarea>
+      </div>
+      <br>
+      <div>
+          <input type="checkbox" id="updates" name="updates" value="updates" checked/>
+          <label for="updates">Sign me up for email updates</label>
+      </div>
+      <br>
+      <input type="submit" value="Submit" name="submit" />
+      <input type="reset" value="Reset" name="reset" />
+ 
+  </div>
+      </fieldset>
+
+  </form>  
+  <h2>You can also contact us at...</h2>
+  <ul>
+    <li>E-mail: 360kitchenandliving@gmail.com</li>
+    <li>Instagram: @360.kitchen</a></li>
+    <li>Call us: +503 4632-0727</li>
+  </ul>
+</body>
+</html>

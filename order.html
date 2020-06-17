@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    
+    <style>
+        body{
+            background-color: #94B3AF ;
+
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color:#94B3AF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:#94B3AF;
+}
+    </style>
+</head>
+<body>
+    <body>
+
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="ourstory.html">Our Story</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <br>
+        <h1>Make Your Order</h1>
+        <form>
+            <fieldset> 
+                <legend>Your Information:</legend>
+                <lable for ="Name">Full name:</lable>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                maxlength="100"
+                placeholder="Enter your name..."
+                />
+                <br>
+                <lable for ="address-one">Address Line 1:</lable>
+                <input
+                type="text"
+                id="address-one"
+                name="address-one"
+                maxlength="100"
+                placeholder="Enter your address..."
+                />
+                <br>
+                <lable for ="address-two">Apt, Suite, etc. (optional) </lable>
+                <input
+                type="text"
+                id="address-two"
+                name="address-two"
+                maxlength="100"
+                placeholder="Enter your apt, suite, etc..."
+                />
+                <br>
+                <lable for ="address-two">City/town </lable>
+                <input
+                type="text"
+                id="address-two"
+                name="address-two"
+                maxlength="100"
+                placeholder="Enter your city/town..."
+                />
+            <div>
+                <div>
+                    <label for="Region-select">Region</label>
+                </div>
+            </div>
+            <select name="Region" id="Region-select">
+                <option value="alta-verapaz">Alta Verapaz</option>
+                <option value="baja-verapaz">Baja Verapaz</option>
+                <option value="chimaltenango">Chimaltenango</option>
+                <option value="chiquimula">Chiquimula</option>
+                <option value="el-progreso">El Progreso</option>
+                <option value="escuintla">Escuintla</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="huehuetenango">Huehuetenango</option>
+                <option value="izabal">Izabal</option>
+                <option value="jalapa">Jalapa</option>
+                <option value="jutiapa">Jutiapa</option>
+                <option value="peten">Peten</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+                <option value="quiche">Huehuetenango</option>
+                <option value="retalhuleu">Retalhuleu</option>
+                <option value="sacatepequez">Sacatepequez</option>
+                <option value="san marcos">San Marcos</option>
+                <option value="santa rosa">Santa Rosa</option>
+                <option value="solola">Solola</option>
+                <option value="suchitepequez">Suchitepequez</option>
+                <option value="totonicapan">Totonicapan</option>
+                <option value="zacapa">Zacapa</option>
+            </select>
+        </div>
+        </div>
+                <br>
+                <lable for ="number">Phone Number:</lable>
+                <input
+                type="text"
+                id="number"
+                name="number"
+                maxlength="100"
+                placeholder="Enter your phone number..."
+                />
+                <br>
+                <lable for="email">Email Address:</lable>
+                <input
+                type="text"
+                id="Email adress"
+                name="Email"
+                maxlength="100"
+                placeholder="Enter your email address..."
+                />
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Your Muffin order</legend>
+<br>
+            <div>
+                <div>
+                    <label for="Product-select">How many muffins do you want?</label>
+                </div>
+            </div>
+            <select name="Muffin" id="Muffin-select">
+                <option value="6-pack">6-pack (Two flavors)</option>
+                <option value="12-pack">12-pack (Three flavors)</option>
+            </select>
+        </div>
+        </div>
+        <br>
+        <br>
+    <div>Which Flavors do you want?</div>
+    <div>
+        <input type="checkbox" id="ALM" name="flavors" value="ALM"/>
+        <label for="ALM">Almond Butter Banana</label>
+    </div>
+    <div>
+        <input type="checkbox" id="CHO" name="flavors" value="CHO"/>
+        <label for="CHO">Choco Banana Muffin </label>
+    </div>
+    <div>
+        <input type="checkbox" id="CARR" name="flavors" value="CARR"/>
+        <label for="CARR">Carrot Pecan Muffin</label>
+    </div>
+    <div>
+        <input type="checkbox" id="HAZ" name="flavors" value="HAZ"/>
+        <label for="HAZ">Hazelnut Chocolate Muffin</label>
+    </div>
+    <br>
+    <div>
+        <label for ="gift-message">Gift message:</label>
+    </div>
+    <div>
+        <textarea
+        id="comments"
+        name="comments"
+        rows="5"
+        columns="25"
+        placeholder="Enter your message here..."></textarea>
+    </div>
+    <div>
+        <br>
+        <div>
+            <label for="Month">Month of delivery:</label>
+        </div>
+    </div>
+    <select name="Month" id="Month">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+</div>
+</div>
+<br>
+<div>
+    <div>
+        <label for="Day">Date of delivery:</label>
+    </div>
+</div>
+<select name="Day" id="day">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="13">23</option>
+    <option value="14">24</option>
+    <option value="15">25</option>
+    <option value="16">26</option>
+    <option value="17">27</option>
+    <option value="18">28</option>
+    <option value="19">29</option>
+    <option value="20">30</option>
+    <option value="21">31</option>
+</select>
+</div>
+</div>
+<br>
+</div>
+</fieldset>
+</form>  
+<br>
+    <fieldset>
+        <legend>Your Cake Order</legend>
+<br>
+    <div>
+        <div>
+            <label for="double-cake-select">Double Layer Cakes</label>
+        </div>
+    </div>
+    <select name="double-cake-select" id="double-cake-select">
+        <option value="Banana-cake">Banana Cake with Almond Butter "Caramel"</option>
+        <option value="Banana-cake">Banana Cake with Almond Butter "Caramel" + edible flowers</option>
+        <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting</option>
+        <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting + edible flowers</option>
+        <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting</option>
+        <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting + edible flowers</option>
+    </select>
+</div>
+</div>
+<br>
+<div>
+<label for ="gift-message">Gift message:</label>
+</div>
+<div>
+<textarea
+id="comments"
+name="comments"
+rows="5"
+columns="25"
+placeholder="Enter your message here..."></textarea>
+</div>
+<br>
+<div>
+    <div>
+        <label for="triple-cake-select">Triple Layer Cakes</label>
+    </div>
+</div>
+<select name="Triple-cake-select" id="Triple-cake-select">
+    <option value="Banana-cake">Banana Cake with Almond Butter "Caramel"</option>
+    <option value="Banana-cake">Banana Cake with Almond Butter "Caramel" + edible flowers</option>
+    <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting</option>
+    <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting + edible flowers</option>
+    <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting</option>
+    <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting + edible flowers</option>
+</select>
+</div>
+</div>
+<br>
+<div>
+<label for ="gift-message">Gift message:</label>
+</div>
+<div>
+<textarea
+id="comments"
+name="comments"
+rows="5"
+columns="25"
+placeholder="Enter your message here..."></textarea>
+</div>
+<br>
+    <div>
+        <div>
+            <label for="Month">Month of delivery:</label>
+        </div>
+    </div>
+    <select name="Month" id="Month">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+</div>
+</div>
+<br>
+<div>
+    <div>
+        <label for="Day">Date of delivery:</label>
+    </div>
+</div>
+<select name="Day" id="day">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="13">23</option>
+    <option value="14">24</option>
+    <option value="15">25</option>
+    <option value="16">26</option>
+    <option value="17">27</option>
+    <option value="18">28</option>
+    <option value="19">29</option>
+    <option value="20">30</option>
+    <option value="21">31</option>
+</select>
+</div>
+</div>
+<br>
+        </div>
+            </fieldset>
+        </form>  
+
+        <input type="submit" value="Submit" name="submit" />
+        <input type="reset" value="Reset" name="reset" />
+   
+        </body>
+ 
+
+</html>
