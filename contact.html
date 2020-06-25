@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="360 Kitchen sells homemade, nutritious, naturally-sweetened muffins 
+    and cakes. ~ 100% Sugar-free, Gluten-free, and Dairy-free ~"/>
+    <meta name="keywords" content="healthy, cakes, muffins, desserts" />
+    <meta name="author" content="Cristina Toledo" />
+
     <title>Contact</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1"></script>
 <script>
@@ -15,6 +38,40 @@
 </script>
 </head>
 <style>
+     .header {
+        background-color: #94b3af;
+        padding: 1px;
+        text-align: center;
+      }
+    
+      
+      #homepagelogo {
+        height: 141px;
+        width: 141px;
+        float: left;
+        
+      }
+      #logotext {
+        height: 141px;
+        width: 454px;
+        float: center;
+        
+      }
+      #navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        font-family: "ABeeZee";
+        text-decoration: bold;
+        font-weight: bolder;
+      }
+      li a:hover {
+        background-color: #54a4a5;
+        color: white;
+      }
+      
     body{
         background-color: #94B3AF ;
 }
@@ -32,25 +89,67 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color:#94B3AF;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color:#94B3AF;
+  background-color: #54a4a5;
 }
+form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-family: "ABeeZee";
+    color: white;
+}
+fieldset{
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+}
+legend{
+    font-weight: bold; 
+    font-size: xx-large;
+    color: #005365;
+    font-family: "bebas neue";
+}
+#message{
+  font-family: "ABeeZee";
+}
+#bold{
+    font-weight: bold;
+   color: #005365;
+}
+#headingfooter{
+        font-family: "bebas neue";
+    }
+footer {
+        text-align: center;
+        padding: 1px;
+        background-color:white;
+        color: #94b3af;
+        font-family: "ABeeZee";
+      }
 </style>
 <body>
+    <div class="header">
+        <img src="images/logo.png" alt="homepagelogo" title="homepagelogo" id="homepagelogo"/>
+        <img src="images/360kitchentext.png" alt="logotext" title="logotext" id="logotext"/>
+        
+      </div>
 
-<ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="order.html">Order</a></li>
-    <li><a href="ourstory.html">Our Story</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+      <ul id="navbar">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class="active" href="muffins.html">Muffins</a></li>
+        <li><a class="active" href="cakes.html">Cakes</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
   <br>
 
   <form>
@@ -80,7 +179,7 @@ li a:hover {
       </div>
       <div>
           <textarea
-          id="comments"
+          id="message"
           name="comments"
           rows="5"
           columns="25"
@@ -99,11 +198,14 @@ li a:hover {
       </fieldset>
 
   </form>  
-  <h2>You can also contact us at...</h2>
-  <ul>
-    <li>E-mail: 360kitchenandliving@gmail.com</li>
-    <li>Instagram: @360.kitchen</a></li>
-    <li>Call us: +503 4632-0727</li>
-  </ul>
+      <br>
+    <footer>
+        <h1 id="headingfooter">360 Kitchen</h1>
+        <a href="mailto:360kitchenandliving@gmail.com">360kitchenandliving@gmail.com</a>
+        <br>
+        <a href="sitemap.html">Sitemap</a>
+      </footer>
+      <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
+    of this work. -->
 </body>
 </html>

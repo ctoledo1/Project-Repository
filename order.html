@@ -2,8 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="description" content="360 Kitchen sells homemade, nutritious, naturally-sweetened muffins 
+    and cakes. ~ 100% Sugar-free, Gluten-free, and Dairy-free ~"/>
+    <meta name="keywords" content="healthy, cakes, muffins, desserts" />
+    <meta name="author" content="Cristina Toledo" />
+
     <title>Order</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1"></script>
 <script>
@@ -15,6 +37,35 @@
 </script>
     
     <style>
+         .header {
+        background-color: #94b3af;
+        padding: 1px;
+        text-align: center;
+      }
+    
+      
+      #homepagelogo {
+        height: 141px;
+        width: 141px;
+        float: left;
+        
+      }
+      #logotext {
+        height: 141px;
+        width: 454px;
+        float: center;
+        
+      }
+      #navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        font-family: "ABeeZee";
+        font-weight: bold;
+      }
+    
         body{
             background-color: #94B3AF ;
 
@@ -40,22 +91,77 @@ li a {
 }
 
 li a:hover {
-  background-color:#94B3AF;
+        background-color: #54a4a5;
+        color: white;
+      }
+#headertitle{
+    font-family: "ABeeZee";
+    color: #005365;
+    text-decoration: bold;
+    text-align: center;
+    font-size: xx-large;
 }
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-family: "ABeeZee";
+    color: white;
+}
+fieldset{
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+}
+legend{
+    font-weight: bold; 
+    font-size: xx-large;
+    color: #005365;
+    font-family: "bebas neue";
+}
+#bold{
+    font-weight: bold;
+   color: #005365;
+}
+
+footer {
+        text-align: center;
+        padding: 1px;
+        background-color:white;
+        color: #94b3af;
+        font-family: "ABeeZee";
+      }
+    #headingfooter{
+        font-family: "bebas neue";
+    }
+  
+    #message{
+        font-family: "ABeeZee"
+    }
+    #buttons{
+        text-align: center;
+        font-family: "ABeeZee";
+       
+    }
     </style>
 </head>
 <body>
-    <body>
-
-<ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="order.html">Order</a></li>
-    <li><a href="ourstory.html">Our Story</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <br>
-        <h1>Make Your Order</h1>
+    <div class="header">
+        <img src="images/logo.png" alt="homepagelogo" title="homepagelogo" id="homepagelogo"/>
+        <img src="images/360kitchentext.png" alt="logotext" title="logotext" id="logotext"/>
+        
+      </div>
+      <ul id="navbar">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class="active" href="muffins.html">Muffins</a></li>
+        <li><a class="active" href="cakes.html">Cakes</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+        <h1 id="headertitle">Make Your Order</h1>
         <form>
             <fieldset> 
                 <legend>Your Information:</legend>
@@ -86,11 +192,11 @@ li a:hover {
                 placeholder="Enter your apt, suite, etc..."
                 />
                 <br>
-                <lable for ="address-two">City/town </lable>
+                <lable for ="city-town">City/town </lable>
                 <input
                 type="text"
-                id="address-two"
-                name="address-two"
+                id="city-twon"
+                name="city-town"
                 maxlength="100"
                 placeholder="Enter your city/town..."
                 />
@@ -146,22 +252,22 @@ li a:hover {
             </fieldset>
             <br>
             <fieldset>
-                <legend>Your Muffin order</legend>
-<br>
+                <legend>Muffins</legend>
             <div>
                 <div>
-                    <label for="Product-select">How many muffins do you want?</label>
+                    <label id="bold" for="Product-select">How many muffins do you want?</label>
                 </div>
             </div>
             <select name="Muffin" id="Muffin-select">
                 <option value="6-pack">6-pack (Two flavors)</option>
                 <option value="12-pack">12-pack (Three flavors)</option>
+                <option value="12-pack">None </option>
             </select>
         </div>
         </div>
         <br>
         <br>
-    <div>Which Flavors do you want?</div>
+    <div id=bold>Which Flavors do you want?</div>
     <div>
         <input type="checkbox" id="ALM" name="flavors" value="ALM"/>
         <label for="ALM">Almond Butter Banana</label>
@@ -180,18 +286,18 @@ li a:hover {
     </div>
     <br>
     <div>
-        <label for ="gift-message">Gift message:</label>
+        <label id="bold" for ="gift-message">Gift message:</label>
     </div>
     <div>
         <textarea
-        id="comments"
+        id="message"
         name="comments"
         rows="5"
         columns="25"
         placeholder="Enter your message here..."></textarea>
     </div>
     <div>
-        <br>
+        <p id="bold">Delivery Date:</p>
         <div>
             <label for="Month">Month of delivery:</label>
         </div>
@@ -212,7 +318,6 @@ li a:hover {
     </select>
 </div>
 </div>
-<br>
 <div>
     <div>
         <label for="Day">Date of delivery:</label>
@@ -258,12 +363,12 @@ li a:hover {
 </fieldset>
 </form>  
 <br>
+<form>
     <fieldset>
-        <legend>Your Cake Order</legend>
-<br>
+        <legend>Cakes</legend>
     <div>
         <div>
-            <label for="double-cake-select">Double Layer Cakes</label>
+            <label id="bold" for="double-cake-select">Double Layer Cakes</label>
         </div>
     </div>
     <select name="double-cake-select" id="double-cake-select">
@@ -273,25 +378,15 @@ li a:hover {
         <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting + edible flowers</option>
         <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting</option>
         <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting + edible flowers</option>
+        <option value="none">None</option>
     </select>
 </div>
 </div>
 <br>
-<div>
-<label for ="gift-message">Gift message:</label>
-</div>
-<div>
-<textarea
-id="comments"
-name="comments"
-rows="5"
-columns="25"
-placeholder="Enter your message here..."></textarea>
-</div>
 <br>
 <div>
     <div>
-        <label for="triple-cake-select">Triple Layer Cakes</label>
+        <label id="bold" for="triple-cake-select">Triple Layer Cakes</label>
     </div>
 </div>
 <select name="Triple-cake-select" id="Triple-cake-select">
@@ -301,22 +396,24 @@ placeholder="Enter your message here..."></textarea>
     <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting + edible flowers</option>
     <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting</option>
     <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting + edible flowers</option>
+    <option value="none">None</option>
 </select>
 </div>
 </div>
 <br>
+<br>
 <div>
-<label for ="gift-message">Gift message:</label>
+<label id="bold" for ="gift-message">Gift message:</label>
 </div>
 <div>
 <textarea
-id="comments"
+id="message"
 name="comments"
 rows="5"
 columns="25"
 placeholder="Enter your message here..."></textarea>
 </div>
-<br>
+<p id="bold">Delivery Date:</p>
     <div>
         <div>
             <label for="Month">Month of delivery:</label>
@@ -382,11 +479,26 @@ placeholder="Enter your message here..."></textarea>
 <br>
         </div>
             </fieldset>
-        </form>  
+        </form> 
+        <br>
+        <br> 
+<div id=buttons>
+    <input type="submit" value="Submit" name="submit" />
+    <input type="reset" value="Reset" name="reset" />
+   </div>
+        
 
-        <input type="submit" value="Submit" name="submit" />
-        <input type="reset" value="Reset" name="reset" />
-   
+    <br>
+    <br>
+  
+    <footer>
+        <h1 id="headingfooter">360 Kitchen</h1>
+        <a href="mailto:360kitchenandliving@gmail.com">360kitchenandliving@gmail.com</a>
+        <br>
+        <a href="sitemap.html">Sitemap</a>
+      </footer>
+<!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
+    of this work. -->
         </body>
  
 

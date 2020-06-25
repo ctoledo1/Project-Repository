@@ -1,82 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="360 Kitchen sells homemade, nutritious, naturally-sweetened muffins 
+  and cakes. ~ 100% Sugar-free, Gluten-free, and Dairy-free ~"/>
+  <meta name="keywords" content="healthy, cakes, muffins, desserts" />
+  <meta name="author" content="Cristina Toledo" />
     <title>Homepage</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
 
-  gtag('config', 'UA-170114070-1');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-170114070-1");
+    </script>
 
     <style>
-         img {
-        height: 400px;
-        width: 400px;
+      body {
+        background-color: #94b3af;
+        margin: 0;
+      }
+      .header {
+        background-color: #94b3af;
+        padding: 1px;
+        text-align: center;
+      }
+
+      #homepagelogo {
+        height: 141px;
+        width: 141px;
+        float: left;
+      }
+      #logotext {
+        height: 141px;
+        width: 454px;
+        float: center;
+      }
+      #navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        font-family: "ABeeZee";
+        font-weight: bold;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: #94b3af;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #54a4a5;
+        color: white;
+      }
+      #homepageimage {
+        width: 1042px;
+        height: 552px;
+        float: center;
+      }
+      #linedesign {
+        width: 396px;
+        height: 555px;
+        float: right;
+      }
+      #headingfooter{
+        font-family: "bebas neue";
     }
-    ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color:white;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color:#94B3AF;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-body{
-    background-color: #94B3AF ;
-}
+      footer {
+        text-align: center;
+        padding: 1px;
+        background-color: white;
+        color: #94b3af;
+        font-family: "ABeeZee";
+      }
     </style>
-
-</head>
-<body>
-
-<ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="order.html">Order</a></li>
-    <li><a href="ourstory.html">Our Story</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  
-<br>
-    <img src="images/logo.png"
-    alt="logo"
-    title="logo"/>
-    <br>
-  <h1>Dare to live your live at 360 Degrees</h1>
-  <h2>Nourish your mind, body, and soul with our healthy, <naturally-sweetened></naturally-sweetened> homemade muffins and cakes. 
-  </h2>
-  <h3>
-~ 100% Sugar-free + Gluten-free Dairy-free ~
-  </h3>
-  <br>
-  <img src="images/homepage.png"
-  alt="homepage"
-  title="homepage"/>
-<br>
-  <p>
-    <a href="sitemap.html">Sitemap</a>
-</p>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="images/logo.png"
+        alt="homepagelogo"
+        title="homepagelogo"
+        id="homepagelogo"
+      />
+      <img
+        src="images/360kitchentext.png"
+        alt="logotext"
+        title="logotext"
+        id="logotext"
+      />
+    </div>
+    <ul id="navbar">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a class="active" href="muffins.html">Muffins</a></li>
+      <li><a class="active" href="cakes.html">Cakes</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="aboutus.html">About </a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
     
-</body>
+    <img
+      src="images/homepageimage.png"
+      alt="homepage"
+      title="homepage"
+      id="homepageimage"
+      style = "width: 100%";
+    />
+    <br />
+    <br />
+
+    <footer>
+      <h1 id="headingfooter">360 Kitchen</h1>
+      <a href="mailto:360kitchenandliving@gmail.com"
+        >360kitchenandliving@gmail.com</a
+      >
+      <br />
+      <a href="sitemap.html">Sitemap</a>
+    </footer>
+
+    <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
+    of this work. -->
+  </body>
 </html>
