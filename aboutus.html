@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <meta name="description" content="360 Kitchen sells homemade, nutritious, naturally-sweetened muffins 
     and cakes. ~ 100% Sugar-free, Gluten-free, and Dairy-free ~"/>
     <meta name="keywords" content="healthy, cakes, muffins, desserts" />
@@ -113,6 +112,11 @@
           height: 552px;
 
       }
+      div.center {
+        width: 1250px; 
+        margin-left: auto;
+        margin-right: auto;
+      }
       #story{
         width: 1436px;
           height: 392px;
@@ -127,6 +131,7 @@
 
       #headingfooter{
         font-family: "bebas neue";
+        font-size: xx-large;
     }
       
       footer {
@@ -136,6 +141,47 @@
         color: #94b3af;
         font-family: "ABeeZee";
       }
+      .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:  #94b3af;
+  padding: 14px 16px;
+  background-color:white;
+  font-family: "ABeeZee";
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #94b3af;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #54a4a5;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
     </style>
   </head>
   <body>
@@ -155,16 +201,27 @@
     </div>
     <ul id="navbar">
       <li><a class="active" href="index.html">Home</a></li>
-      <li><a class="active" href="muffins.html">Muffins</a></li>
-      <li><a class="active" href="cakes.html">Cakes</a></li>
+      <div class="dropdown">
+        <div class="dropbtn">Menu
+          <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="dropdown-content">
+          <a href="muffins.html">Muffins</a>
+          <a href="cakes.html">Cakes</a>
+        </div>
+      </div> 
+    
       <li><a href="order.html">Order</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="aboutus.html">About</a></li>
+      <li><a href="aboutus.html">About </a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <img src="images/rainbow.png" alt="rainbow" title="rainbow" id="rainbow" />
+    
+    <div class="center">
+      <img src="images/rainbow.png" alt="rainbow" title="rainbow" id="rainbow" />
     <img src="images/california.png" alt="california" title="california" id="california" />
     <img src="images/tikal.png" alt="tikal" title="tikal" id="tikal" />
+    </div>
+    
     <br>
     <img src="images/story.png" alt="story" title="story" id="story"/>
     <br>
@@ -173,7 +230,7 @@
     <br>
     <br>
     <footer>
-      <h1 id="headingfooter">360 Kitchen</h1>
+      <div id="headingfooter">360 Kitchen</div>
       <a href="mailto:360kitchenandliving@gmail.com"
         >360kitchenandliving@gmail.com</a
       >
