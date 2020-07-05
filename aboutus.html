@@ -194,6 +194,25 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      #mission-text { 
+        animation-duration: 6s;  
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        color: white;
+        font-family: "ABeeZee";
+      }
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -245,19 +264,20 @@
       />
       <img src="images/tikal.png" alt="tikal" title="tikal" id="tikal" />
     </div>
-
-    <br />
+    <br>
+    <p id="mission-text"> ~ Dare to live your life at 360 degrees ~</p>
+    <br>
     <img src="images/story.png" alt="story" title="story" id="story" />
-    <br />
-    <br />
+    <br>
+    <br>
     <img
       src="images/mymission.png"
       alt="mission"
       title="mission"
       id="mission"
     />
-    <br />
-    <br />
+    <br>
+    <br>
     <footer>
       <div id="headingfooter">360 Kitchen</div>
       <a href="mailto:360kitchenandliving@gmail.com"
