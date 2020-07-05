@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="360 Kitchen sells homemade, nutritious, naturally-sweetened muffins 
-  and cakes. ~ 100% Sugar-free, Gluten-free, and Dairy-free ~"/>
-  <meta name="keywords" content="healthy, cakes, muffins, desserts" />
-  <meta name="author" content="Cristina Toledo" />
+    <meta
+      name="description"
+      content="360 Kitchen sells homemade, nutritious, naturally-sweetened muffins 
+    and cakes. 100% Sugar-free, Gluten-free, and Dairy-free."
+    />
+    <meta
+      name="keywords"
+      content="healthy, cakes, muffins, desserts, bakery, wellness, nutrition, sweets, treats"
+    />
+    <meta name="author" content="Cristina Toledo -- founder" />
+    <script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-170114070-1");
+    </script>
+
     <title>Homepage</title>
     <link
       rel="apple-touch-icon"
@@ -49,7 +69,7 @@
       }
       .header {
         background-color: #94b3af;
-        padding: 1px;
+        padding: 0px;
         text-align: center;
       }
 
@@ -69,7 +89,6 @@
         padding: 0;
         overflow: hidden;
         background-color: white;
-        font-family: "ABeeZee";
         font-weight: bold;
       }
 
@@ -78,11 +97,12 @@
       }
 
       li a {
-        display: block;
         color: #94b3af;
-        text-align: center;
-        padding: 14px 16px;
+        font-family: "ABeeZee";
         text-decoration: none;
+        padding: 14px 16px;
+        display: block;
+        text-align: center;
       }
 
       li a:hover {
@@ -99,10 +119,10 @@
         height: 555px;
         float: right;
       }
-      #headingfooter{
+      #headingfooter {
         font-family: "bebas neue";
         font-size: xx-large;
-    }
+      }
       footer {
         text-align: center;
         padding: 1px;
@@ -111,46 +131,48 @@
         font-family: "ABeeZee";
       }
       .dropdown {
-  float: left;
-  overflow: hidden;
-}
+        float: left;
+        overflow: hidden;
+      }
 
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color:  #94b3af;
-  padding: 14px 16px;
-  background-color:white;
-  font-family: "ABeeZee";
-  margin: 0;
-}
+      .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: #94b3af;
+        padding: 14px 16px;
+        background-color: white;
+        margin: 0;
+        font-family: "ABeeZee";
+      }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  z-index: 1;
-}
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        z-index: 1;
+        font-family: "ABeeZee";
+      }
 
-.dropdown-content a {
-  float: none;
-  color: #94b3af;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+      .dropdown-content a {
+        float: none;
+        color: #94b3af;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-family: "ABeeZee";
+      }
 
-.dropdown-content a:hover {
-  background-color: #54a4a5;
-  color: white;
-}
+      .dropdown-content a:hover {
+        background-color: #54a4a5;
+        color: white;
+      }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -171,26 +193,29 @@
     <ul id="navbar">
       <li><a class="active" href="index.html">Home</a></li>
       <div class="dropdown">
-        <div class="dropbtn">Menu
+        <div class="dropbtn">
+          Menu
           <i class="fa fa-caret-down"></i>
         </div>
         <div class="dropdown-content">
           <a href="muffins.html">Muffins</a>
           <a href="cakes.html">Cakes</a>
         </div>
-      </div> 
-    
+      </div>
+
       <li><a href="order.html">Order</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="aboutus.html">About </a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    
+
     <img
       src="images/homepageimage.png"
       alt="homepage"
       title="homepage"
       id="homepageimage"
-      style = "width: 100%";
+      style="width: 100%;"
+      ;
     />
     <br />
     <br />
