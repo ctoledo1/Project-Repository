@@ -13,6 +13,15 @@
       content="healthy, cakes, muffins, desserts, bakery, wellness, nutrition, sweets, treats"
     />
     <meta name="author" content="Cristina Toledo -- founder" />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170114070-1');
+</script>
 
     <title>Muffins</title>
     <link
@@ -286,9 +295,13 @@
       const colorsThree = ["#164267", "#54a4a5", "#638cb7", "#8FCCDF"];
       const colorsFour = ["#54a4a5", "#638cb7", "#8FCCDF", "#164267"];
 
+      let i = 0;
+      let j = 0;
+      let k = 0;
+      let n = 0;
+
       //Almond Muffin Slide Show
       function slideShowOne() {
-        let i = 0;
         if (i === slidesOne.length) {
           i = 0;
         }
@@ -304,7 +317,6 @@
       //Choco Muffin Slide Show
 
       function slideShowTwo() {
-        let j = 0;
         if (j === slidesTwo.length) {
           j = 0;
         }
@@ -318,7 +330,6 @@
       document.addEventListener("DOMContentLoaded", slideShowTwo);
 
       function slideShowThree() {
-        let k = 0;
         if (k === slidesThree.length) {
           k = 0;
         }
@@ -332,13 +343,12 @@
       document.addEventListener("DOMContentLoaded", slideShowThree);
 
       function slideShowFour() {
-        let n = 0;
         if (n === slidesFour.length) {
           n = 0;
         }
         hazelnutMuffin.src = slidesFour[n];
         hazelnutMuffin.style.borderColor = colorsFour[n];
-        d = d + 1;
+        n = n + 1;
 
         setTimeout(slideShowFour, 2000);
       }
