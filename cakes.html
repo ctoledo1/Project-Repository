@@ -13,15 +13,20 @@
       content="healthy, cakes, muffins, desserts, bakery, wellness, nutrition, sweets, treats"
     />
     <meta name="author" content="Cristina Toledo -- founder" />
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-170114070-1');
-</script>
+      gtag("config", "UA-170114070-1");
+    </script>
     <title>Cakes</title>
     <link
       rel="apple-touch-icon"
@@ -151,6 +156,34 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      #cake-flavor {
+        width: 500px;
+        height: 500px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: white;
+        margin-right: auto;
+        margin-left: auto;
+        float: center;
+        display: block;
+      }
+      #cake-flavor-text {
+        color: white;
+        font-family: "ABeeZee";
+        text-align: center;
+      }
+      #flavor-instructions {
+        color:#005365;
+        font-family: "ABeeZee";
+        text-align: center;
+      }
+      p {
+        color: white;
+        font-family: "ABeeZee";
+        text-align: center;
+        font-size: x-large;
+      }
+      
     </style>
   </head>
   <body>
@@ -194,7 +227,21 @@
       id="cakesmenu"
       style="width: 100%;"
     />
-
+    <br />
+    <h1 id="cake-flavor-text">My favorite flavor is definitely...</h1>
+    <img
+      src="images/question.png"
+      alt="flavor"
+      title="flavor"
+      id="cake-flavor"
+    />
+    <br />
+    <h2 id="flavor-instructions">
+      Click on the image & enter the name of your favorite flavor:
+    </h2>
+    <p>♡Banana</p>
+    <p>♡Chocolate</p>
+    <p>♡Carrot</p>
     <br />
 
     <footer>
@@ -205,7 +252,31 @@
       <br />
       <a href="sitemap.html">Sitemap</a>
     </footer>
+    <script>
+      //favorite flavor alert
+      function displayImage() {
+        let message = prompt("What is your favorite flavor?");
+        let flavor = document.getElementById("cake-flavor");
+        let name = document.querySelector("cake-flavor-text");
 
+        if (message.toLowerCase() == "banana") {
+          flavor.src = "images/bananacaketwo.png";
+          name.innerText = "Banana Cake";
+          flavor.style.borderColor = "#005365";
+        } else if (message.toLowerCase() == "chocolate") {
+          flavor.src = "images/chocolatecaketwo.png";
+          name.innerText = "Chocolate Cake";
+          flavor.style.borderColor = "#54a4a5";
+        } else if (message.toLowerCase() == "carrot") {
+          flavor.src = "images/carrotcaketwo.png";
+          name.innerText = "Carrot Cake";
+          flavor.style.borderColor = "#0c234c";
+        } else {
+          alert("Incorrect!");
+        }
+      }
+      document.getElementById("cake-flavor").onclick = displayImage;
+    </script>
     <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
     of this work. -->
   </body>
