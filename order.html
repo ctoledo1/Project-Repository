@@ -115,7 +115,14 @@ li a:hover {
     font-size: xx-large;
 }
 
-form{
+#original-form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-family: "ABeeZee";
+    color: white;
+}
+#form-2{
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -226,7 +233,7 @@ footer {
       </ul>
       
         <h1 id="headertitle">Make Your Order</h1>
-        <form>
+        <form id='original-form'>
             <fieldset> 
                 <legend>Your Information:</legend>
                 <lable for ="Name">Full name:</lable>
@@ -427,7 +434,7 @@ footer {
 </fieldset>
 </form>  
 <br>
-<form>
+<form id="form-2">
     <fieldset>
         <legend>Cakes</legend>
     <div>
@@ -550,18 +557,26 @@ placeholder="Enter your message here..."></textarea>
     <input type="submit" value="Submit" name="submit" />
     <input type="reset" value="Reset" name="reset" />
    </div>
-        
-
     <br>
     <br>
-  
     <footer>
         <div id="headingfooter">360 Kitchen</div>
         <a href="mailto:360kitchenandliving@gmail.com">360kitchenandliving@gmail.com</a>
         <br>
         <a href="sitemap.html">Sitemap</a>
       </footer>
-<!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
+      <script>
+        const form = document.getElementById('original-form'); //here, we are getting the form called "original-form"
+
+form.addEventListener('focusin', (event) => { //this event show that when the user clicks on the textbox
+event.target.style.background = 'lightseagreen'; //the background will turn light sea green
+});
+
+form.addEventListener('focusout', (event) => { //this event show that when the user clicks out of the  textbox
+event.target.style.background = '';  //the background will turn back to white
+});
+
+    <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
     of this work. -->
         </body>
  
