@@ -35,7 +35,7 @@
     <link rel="manifest" href="images/site.webmanifest" />
     <style>
       .header {
-        background-color:#94b3af;
+        background-color: #94b3af;
         padding: 1px;
         text-align: center;
       }
@@ -148,28 +148,28 @@
       }
       #almond-banana {
         border-style: solid;
-        border-color: white;
+        border-color: "#638cb7";
         border-width: 4px;
         width: 347px;
         height: 550px;
       }
       #choco-banana {
         border-style: solid;
-        border-color: white;
+        border-color: "#8fccdf";
         border-width: 4px;
         width: 347px;
         height: 550px;
       }
       #carrot-pecan {
         border-style: solid;
-        border-color: white;
+        border-color: "#164267";
         border-width: 4px;
         width: 347px;
         height: 550px;
       }
       #hazelnut-chocolate {
         border-style: solid;
-        border-color: white;
+        border-color: "#54a4a5";
         border-width: 4px;
         width: 347px;
         height: 550px;
@@ -281,66 +281,69 @@
       const carrotMuffin = document.getElementById("carrot-pecan");
       const hazelnutMuffin = document.getElementById("hazelnut-chocolate");
 
-      const colorsOne = ["#638cb7", "#8FCCDF", "#164267" , "#54a4a5"];
-      const colorsTwo = ["#8FCCDF", "#164267" , "#54a4a5","#638cb7"];
-      const colorsThree = ["#164267" , "#54a4a5","#638cb7", "#8FCCDF"];
-      const colorsFour = ["#54a4a5","#638cb7", "#8FCCDF", "#164267" ];
-      let i = 0;
+      const colorsOne = ["#638cb7", "#8FCCDF", "#164267", "#54a4a5"];
+      const colorsTwo = ["#8FCCDF", "#164267", "#54a4a5", "#638cb7"];
+      const colorsThree = ["#164267", "#54a4a5", "#638cb7", "#8FCCDF"];
+      const colorsFour = ["#54a4a5", "#638cb7", "#8FCCDF", "#164267"];
 
       //Almond Muffin Slide Show
       function slideShowOne() {
-        if (i === slidesOne.length) {
-          i = 0;
+        let a = 0;
+        if (a === slidesOne.length) {
+          a = 0;
         }
-        almondMuffin.src = slidesOne[i];
-        almondMuffin.style.borderColor = colorsOne[i];
-        i = i + 1;
+        almondMuffin.src = slidesOne[a];
+        almondMuffin.style.borderColor = colorsOne[a];
+        a = a + 1;
 
         setTimeout(slideShowOne, 2000);
       }
 
-      document.querySelector("body").onload = slideShowOne;
+      document.addEventListener("DOMContentLoaded", slideShowOne);
 
       //Choco Muffin Slide Show
 
       function slideShowTwo() {
-        if (i === slidesTwo.length) {
-          i = 0;
+        let b = 0;
+        if (b === slidesTwo.length) {
+          b = 0;
         }
-        chocoMuffin.src = slidesTwo[i];
-        chocoMuffin.style.borderColor = colorsTwo[i];
-        i = i + 1;
+        chocoMuffin.src = slidesTwo[b];
+        chocoMuffin.style.borderColor = colorsTwo[b];
+        b = b + 1;
 
         setTimeout(slideShowTwo, 2000);
       }
 
-      document.querySelector("body").onload = slideShowTwo;
+      document.addEventListener("DOMContentLoaded", slideShowTwo);
 
       function slideShowThree() {
-        if (i === slidesThree.length) {
-          i = 0;
+        let c = 0;
+        if (c === slidesThree.length) {
+          c = 0;
         }
-        carrotMuffin.src = slidesThree[i];
-        carrotMuffin.style.borderColor = colorsThree[i];
-        i = i + 1;
+        carrotMuffin.src = slidesThree[c];
+        carrotMuffin.style.borderColor = colorsThree[c];
+        c = c + 1;
 
         setTimeout(slideShowThree, 2000);
       }
 
-      document.querySelector("body").onload = slideShowThree;
+      document.addEventListener("DOMContentLoaded", slideShowThree);
 
       function slideShowFour() {
-        if (i === slidesFour.length) {
-          i = 0;
+        let d = 0;
+        if (d === slidesFour.length) {
+          d = 0;
         }
-        hazelnutMuffin.src = slidesFour[i];
-        hazelnutMuffin.style.borderColor = colorsFour[i];
-        i = i + 1;
+        hazelnutMuffin.src = slidesFour[d];
+        hazelnutMuffin.style.borderColor = colorsFour[d];
+        d = d + 1;
 
         setTimeout(slideShowFour, 2000);
       }
 
-      document.querySelector("body").onload = slideShowFour;
+      document.addEventListener("DOMContentLoaded", slideShowFour);
     </script>
 
     <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
