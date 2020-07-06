@@ -200,6 +200,9 @@
     #coffee-mug {
       height: 474px;
       width: 474px;
+      border-style: solid;
+      border-width: 5px;
+      border-color: "#638cb7";
     }
     div.coffee {
       margin-left: auto;
@@ -330,10 +333,12 @@
       function changeImage(mug) {
         let coffeeMug = document.getElementById(mug);
         coffeeMug.src = "images/cakeslice.jpg";
+        coffeeMug.style.borderColor = "#8FCCDF";
        
-
         let h = document.querySelector("h2");
         h.innerText = "...a slice of 360 Kitchen cake!";
+
+
       }
 
       document.getElementById("mug").onmouseover = function () {
