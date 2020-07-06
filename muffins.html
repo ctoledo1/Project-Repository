@@ -183,6 +183,34 @@
         width: 347px;
         height: 550px;
       }
+      #question-img{
+        height: 600px;
+        width: 600px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+      #favorite{
+        color: white;
+        font-family: "ABeeZee";
+        text-align: center;
+        border-style: solid;
+        border-color: #54a4a5;
+        border-width: 5px;
+        margin-left: 415px;
+        margin-right: 415px;
+       
+      }
+      #my-form{
+        color: white;
+        font-family: "ABeeZee";
+        text-align: center;
+      }
+      .muffin-hands{
+        height: 400px;
+        width: 400px;
+      }
     </style>
   </head>
   <body>
@@ -243,14 +271,55 @@
       title="hazelnut-chocolate"
       id="hazelnut-chocolate"
     />
-    <br />
+    <br>
+  <img
+  src="images/muffinleft.png"
+  alt="menuimage"
+  title="menuimage"
+  class="muffin-hands"
+/>
     <img
-      src="images/menuimage.png"
+      src="images/muffinleftchoco.png"
       alt="menuimage"
       title="menuimage"
-      id="menuimage"
+      class="muffin-hands"
     />
-
+    <br>
+    <img
+    src="images/menuimage.png"
+    alt="menuimage"
+    title="menuimage"
+    id="menuimage"
+  />
+  <br>
+    <img
+    src="images/muffinrightchoco.png"
+    alt="menuimage"
+    title="menuimage"
+    class="muffin-hands"
+  />
+  <img
+  src="images/muffinright.png"
+  alt="menuimage"
+  title="menuimage"
+  class="muffin-hands"
+/>
+    <h1 id="favorite">My favorite flavor is definitely...</h1> 
+    <form action="" method="post" id="my-form">
+      <label><input type="radio" name="flavors" value="images/almond-butter-banana"/>Almond Butter Banana</label>
+      <label><input type="radio" name="flavors" value="images/choco-banana" />Choco Banana</label>
+      <label><input type="radio" name="flavors" value="images/carrot-pecan" />Carrot Pecan</label>
+      <label><input type="radio" name="flavors" value="images/hazelnut-chocolate" />Hazelnut Chocolate</label>
+     <br>
+      <input type="button" value="Select" id="select-btn"/>
+    </form>
+    <img
+    src="images/questionmuffin.png"
+    alt="question"
+    title="question"
+    id="question-img"
+  />
+<br>
     <footer>
       <div id="headingfooter">360 Kitchen</div>
       <a href="mailto:360kitchenandliving@gmail.com"
@@ -309,7 +378,7 @@
         almondMuffin.style.borderColor = colorsOne[i];
         i = i + 1;
 
-        setTimeout(slideShowOne, 2000);
+        setTimeout(slideShowOne, 3000);
       }
 
       document.addEventListener("DOMContentLoaded", slideShowOne);
@@ -324,7 +393,7 @@
         chocoMuffin.style.borderColor = colorsTwo[j];
         j = j + 1;
 
-        setTimeout(slideShowTwo, 2000);
+        setTimeout(slideShowTwo, 3000);
       }
 
       document.addEventListener("DOMContentLoaded", slideShowTwo);
@@ -337,7 +406,7 @@
         carrotMuffin.style.borderColor = colorsThree[k];
         k = k + 1;
 
-        setTimeout(slideShowThree, 2000);
+        setTimeout(slideShowThree, 3000);
       }
 
       document.addEventListener("DOMContentLoaded", slideShowThree);
@@ -350,10 +419,28 @@
         hazelnutMuffin.style.borderColor = colorsFour[n];
         n = n + 1;
 
-        setTimeout(slideShowFour, 2000);
+        setTimeout(slideShowFour, 3000);
       }
 
       document.addEventListener("DOMContentLoaded", slideShowFour);
+
+    //radio buttons
+    const myForm = document.getElementById("my-form");
+
+function selectFlavor() {
+  const flavors = myForm["flavors"];
+  let userChoice;
+
+  for (let i = 0; i < flavors.length; i++) {
+
+    if (flavors[i].checked) {
+      userChoice = flavors[i].value;
+      document.querySelector("question").src  = "images/"
+    }
+  }
+}
+
+document.getElementById("select-btn").onclick = selectFlavor;
     </script>
 
     <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
