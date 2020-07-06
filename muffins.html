@@ -13,19 +13,6 @@
       content="healthy, cakes, muffins, desserts, bakery, wellness, nutrition, sweets, treats"
     />
     <meta name="author" content="Cristina Toledo -- founder" />
-    <script>
-             <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170114070-1">
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-170114070-1");
-    </script>
 
     <title>Muffins</title>
     <link
@@ -99,10 +86,7 @@
         background-color: #54a4a5;
         color: white;
       }
-      img {
-        width: 350px;
-        height: 550px;
-      }
+
       #menuimage {
         width: 471px;
         height: 927px;
@@ -162,6 +146,34 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      #almond-banana {
+        border-style: solid;
+        border-color: white;
+        border-width: 3px;
+        width: 349px;
+        height: 550px;
+      }
+      #choco-banana {
+        border-style: solid;
+        border-color: white;
+        border-width: 3px;
+        width: 349px;
+        height: 550px;
+      }
+      #carrot-pecan {
+        border-style: solid;
+        border-color: white;
+        border-width: 3px;
+        width: 349px;
+        height: 550px;
+      }
+      #hazelnut-chocolate {
+        border-style: solid;
+        border-color: white;
+        border-width: 3px;
+        width: 349px;
+        height: 550px;
+      }
     </style>
   </head>
   <body>
@@ -202,22 +214,26 @@
       src="images/almondbananamuffin.png"
       alt="Almond-banana"
       title="Almond-banana"
+      id="almond-banana"
     />
     <img
       src="images/chocobananamuffin.png"
-      alt="Chocobanana"
-      title="Chocobanana"
+      alt="choco-banana"
+      title="choco-banana"
+      id="choco-banana"
     />
-    <img src="images/carrotpecanmuffin.png" alt="Carrot" title="Carrot" />
+    <img
+      src="images/carrotpecanmuffin.png"
+      alt="carrot-pecan"
+      title="carrot-pecan"
+      id="carrot-pecan"
+    />
     <img
       src="images/hazelnutchocolatemuffin.png"
-      alt="Hazelnut"
-      title="Hazelnut"
+      alt="hazelnut-chocolate"
+      title="hazelnut-chocolate"
+      id="hazelnut-chocolate"
     />
-    <br />
-    <br />
-    <br />
-    <br />
     <br />
     <img
       src="images/menuimage.png"
@@ -234,6 +250,98 @@
       <br />
       <a href="sitemap.html">Sitemap</a>
     </footer>
+
+    <script>
+      const slidesOne = [
+        "images/almondbananamuffin.png",
+        "images/chocobananamuffin.png",
+        "images/carrotpecanmuffin.png",
+        "images/hazelnutchocolatemuffin.png",
+      ];
+      const slidesTwo = [
+        "images/chocobananamuffin.png",
+        "images/carrotpecanmuffin.png",
+        "images/hazelnutchocolatemuffin.png",
+        "images/almondbananamuffin.png",
+      ];
+      const slidesThree = [
+        "images/carrotpecanmuffin.png",
+        "images/hazelnutchocolatemuffin.png",
+        "images/almondbananamuffin.png",
+        "images/chocobananamuffin.png",
+      ];
+      const slidesFour = [
+        "images/hazelnutchocolatemuffin.png",
+        "images/almondbananamuffin.png",
+        "images/chocobananamuffin.png",
+        "images/carrotpecanmuffin.png",
+      ];
+      const almondMuffin = document.getElementById("almond-banana");
+      const chocoMuffin = document.getElementById("choco-banana");
+      const carrotMuffin = document.getElementById("carrot-pecan");
+      const hazelnutMuffin = document.getElementById("hazelnut-chocolate");
+
+      const colorsOne = ["red", "yellow", "blue", "green"];
+      const colorsTwo = ["yellow", "blue", "green", "red"];
+      const colorsThree = ["blue", "green", "red", "yellow"];
+      const colorsFour = ["green", "red", "yellow", "blue"];
+      let i = 0;
+
+      //Almond Muffin Slide Show
+      function slideShowOne() {
+        if (i === slidesOne.length) {
+          i = 0;
+        }
+        almondMuffin.src = slidesOne[i];
+        almondMuffin.style.borderColor = colorsOne[i];
+        i = i + 1;
+
+        setTimeout(slideShowOne, 2000);
+      }
+
+      document.querySelector("body").onload = slideShowOne;
+
+      //Choco Muffin Slide Show
+
+      function slideShowTwo() {
+        if (i === slidesTwo.length) {
+          i = 0;
+        }
+        chocoMuffin.src = slidesTwo[i];
+        chocoMuffin.style.borderColor = colorsTwo[i];
+        i = i + 1;
+
+        setTimeout(slideShowTwo, 2000);
+      }
+
+      document.querySelector("body").onload = slideShowTwo;
+
+      function slideShowThree() {
+        if (i === slidesThree.length) {
+          i = 0;
+        }
+        carrotMuffin.src = slidesThree[i];
+        carrotMuffin.style.borderColor = colorsThree[i];
+        i = i + 1;
+
+        setTimeout(slideShowThree, 2000);
+      }
+
+      document.querySelector("body").onload = slideShowThree;
+
+      function slideShowFour() {
+        if (i === slidesFour.length) {
+          i = 0;
+        }
+        hazelnutMuffin.src = slidesFour[i];
+        hazelnutMuffin.style.borderColor = colorsFour[i];
+        i = i + 1;
+
+        setTimeout(slideShowFour, 2000);
+      }
+
+      document.querySelector("body").onload = slideShowFour;
+    </script>
 
     <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
     of this work. -->
