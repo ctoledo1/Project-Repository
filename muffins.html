@@ -288,13 +288,13 @@
 
       //Almond Muffin Slide Show
       function slideShowOne() {
-        let a = 0;
-        if (a === slidesOne.length) {
-          a = 0;
+        let i = 0;
+        if (i === slidesOne.length) {
+          i = 0;
         }
-        almondMuffin.src = slidesOne[a];
-        almondMuffin.style.borderColor = colorsOne[a];
-        a = a + 1;
+        almondMuffin.src = slidesOne[i];
+        almondMuffin.style.borderColor = colorsOne[i];
+        i = i + 1;
 
         setTimeout(slideShowOne, 2000);
       }
@@ -304,13 +304,13 @@
       //Choco Muffin Slide Show
 
       function slideShowTwo() {
-        let b = 0;
-        if (b === slidesTwo.length) {
-          b = 0;
+        let j = 0;
+        if (j === slidesTwo.length) {
+          j = 0;
         }
-        chocoMuffin.src = slidesTwo[b];
-        chocoMuffin.style.borderColor = colorsTwo[b];
-        b = b + 1;
+        chocoMuffin.src = slidesTwo[j];
+        chocoMuffin.style.borderColor = colorsTwo[j];
+        j = j + 1;
 
         setTimeout(slideShowTwo, 2000);
       }
@@ -318,13 +318,13 @@
       document.addEventListener("DOMContentLoaded", slideShowTwo);
 
       function slideShowThree() {
-        let c = 0;
-        if (c === slidesThree.length) {
-          c = 0;
+        let k = 0;
+        if (k === slidesThree.length) {
+          k = 0;
         }
-        carrotMuffin.src = slidesThree[c];
-        carrotMuffin.style.borderColor = colorsThree[c];
-        c = c + 1;
+        carrotMuffin.src = slidesThree[k];
+        carrotMuffin.style.borderColor = colorsThree[k];
+        k = k + 1;
 
         setTimeout(slideShowThree, 2000);
       }
@@ -332,12 +332,12 @@
       document.addEventListener("DOMContentLoaded", slideShowThree);
 
       function slideShowFour() {
-        let d = 0;
-        if (d === slidesFour.length) {
-          d = 0;
+        let n = 0;
+        if (n === slidesFour.length) {
+          n = 0;
         }
-        hazelnutMuffin.src = slidesFour[d];
-        hazelnutMuffin.style.borderColor = colorsFour[d];
+        hazelnutMuffin.src = slidesFour[n];
+        hazelnutMuffin.style.borderColor = colorsFour[n];
         d = d + 1;
 
         setTimeout(slideShowFour, 2000);
