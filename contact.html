@@ -127,6 +127,8 @@
       font-family: "ABeeZee";
       color: white;
       text-align: center;
+      margin-bottom: 150px;
+      margin-top: 70px;
     }
     fieldset {
       border-width: 4px;
@@ -199,21 +201,22 @@
       display: block;
     }
     #mug {
-      height: 474px;
-      width: 474px;
+      height: 568px;
+      width: 568px;
       border-style: solid;
       border-width: 5px;
       border-color: #638cb7;
       margin-left: auto;
       margin-right: auto;
       display: block;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
-    h2 {
+    #tastes {
       color: #005365;
       font-family: "ABeeZee";
       text-align: center;
+      font-size: xx-large;
     }
     #mission-text {
         animation-duration: 7s;
@@ -222,8 +225,9 @@
         animation-direction: alternate;
         color: #005365;
         font-family: "ABeeZee";
-        font-size: x-large;
+        font-size: xx-large;
         font-weight: bolder;
+        margin-top: 100px;
       }
       @keyframes slidein {
         from {
@@ -236,6 +240,17 @@
           width: 100%;
         }
       }
+      #triplematcha{
+        width: 318px;
+        height: 301px;
+        float: left;
+      }
+      #doublematcha{
+        width: 318px;
+        height: 301px;
+        float: right;
+      }
+    
   </style>
   <body>
     <div class="header">
@@ -267,16 +282,18 @@
       </div>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="aboutus.html">About </a></li>
-      <li><a href="order.html">Shop</a></li>
+      <li><a href="order.html">Order</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   
-    <p id="mission-text">~ Want your own cake flavor? Let us know! ~</p>
+    <p id="mission-text">Want your own cake flavor? Let us know!</p>
     
 
     <form id="original-form">
       <fieldset>
         <legend>Contact Us:</legend>
+        <img src="images/matchaone.png" alt="triplematcha" title="triplematcha" id="triplematcha">
+        <img src="images/matchatwo.png" alt="doublematcha" title="doublematcha" id="doublematcha">
         <lable for="Name">Name:</lable>
         <input
           type="text"
@@ -326,9 +343,10 @@
       </fieldset>
     </form>
     <br />
-    <h2>Because your coffee tastes better with...</h2>
+    <h2 id="tastes">Because your coffee tastes better with...</h2>
 
     <img src="images/coffee.jpg" alt="coffee" title="coffee" id="mug" />
+   
 
     <footer>
       <div id="headingfooter">360 Kitchen</div>
@@ -357,7 +375,7 @@
         //mouseover
         let coffeeMug = document.getElementById(mug);
         coffeeMug.src = "images/cakeslice.jpg";
-        coffeeMug.style.borderColor = "#8FCCDF";
+        coffeeMug.style.borderColor = "#164267";
 
         let h = document.querySelector("h2");
         h.innerText = "...a slice of 360 Kitchen cake!";
