@@ -222,8 +222,6 @@ div#final-order{
     color: #005365;
     
 }
-
-
     </style>
 </head>
 <body>
@@ -341,7 +339,7 @@ div#final-order{
                     <label id="bold" for="Product-select">How many muffins do you want?</label>
                 </div>
             </div>
-            <select name="Muffin" id="Muffin-select">
+            <select name="packs" id="Muffin-select">
                 <option value="6-pack">6-pack (Two flavors)</option>
                 <option value="12-pack">12-pack (Three flavors)</option>
                 <option value="12-pack">None </option>
@@ -452,7 +450,7 @@ div#final-order{
             <label id="bold" for="double-cake-select">Double Layer Cakes</label>
         </div>
     </div>
-    <select name="double-cake-select" id="double-cake-select">
+    <select name="double" id="double-cake-select">
         <option value="Banana-cake">Banana Cake with Almond Butter "Caramel"</option>
         <option value="Banana-cake">Banana Cake with Almond Butter "Caramel" + edible flowers</option>
         <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting</option>
@@ -470,7 +468,7 @@ div#final-order{
         <label id="bold" for="triple-cake-select">Triple Layer Cakes</label>
     </div>
 </div>
-<select name="Triple-cake-select" id="Triple-cake-select">
+<select name="triple" id="Triple-cake-select">
     <option value="Banana-cake">Banana Cake with Almond Butter "Caramel"</option>
     <option value="Banana-cake">Banana Cake with Almond Butter "Caramel" + edible flowers</option>
     <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting</option>
@@ -566,7 +564,7 @@ placeholder="Enter your message here..."></textarea>
             <label>
             Your final order: 
             <br>
-              <textarea id="textareaorder" cols="60" name="result" rows="8" readonly></textarea>
+              <textarea cols="60" name="result" rows="8" readonly></textarea>
             </label>
           </div>
         <br>
@@ -585,7 +583,7 @@ placeholder="Enter your message here..."></textarea>
       </footer>
 
       <script>
-        const form = document.getElementById('original-form'); 
+           const form = document.getElementById('original-form'); 
 
 // making the textbox turn turquoise when clicked
 form.addEventListener('focusin', (event) => { //this event show that when the user clicks on the textbox
@@ -597,23 +595,37 @@ event.target.style.background = '';  //the background will turn back to white
 });
 
 //validating form and displaying final order
-const fullName = form.name.value;
+
+function displayOrder() {
+    const fullName = form.name.value;
         const addressOne = form.address.value;
         const city = form.city.value;
         const region = form.region.value;
         const phone = form.phone.value;
         const email = form.email.value;
-
-function displayOrder() {
+        const packs = form.packs.value;
+        const flavors = form.flavors.value;
+        const doubleCake = form.double.value;
+        const tripleCake = form.triple.value;
+        
         
         if (fullName === "" || addressOne === "" || city === "" || region === "" || phone === "" || email === "" ) {
           alert("You did not finish the form yet!");
         } else if (isNaN(phone)) {
           alert("You did not enter a valid phone number!");
+        } else {
+            let message;
+          if (form["flavors"].checked) {
+            message = "Muffin quantity:" + packs + "\nMuffin Flavors: " + flavors + "\nCake: " + doubleCake + tripleCake;
+          } 
+
+          form.result.value = message;
+        }
       }
 
-      document.getElementById("#submit-btn").onclick = displayOrder;
+      document.getElementById("submit-btn").onclick = displayOrder;
 
-</script>
+      </script>
+
         </body>
 </html>
