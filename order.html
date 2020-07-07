@@ -340,9 +340,9 @@ div#final-order{
                 </div>
             </div>
             <select name="packs" id="Muffin-select">
-                <option value="6-pack">6-pack (Two flavors)</option>
-                <option value="12-pack">12-pack (Three flavors)</option>
-                <option value="12-pack">None </option>
+                <option value="6-pack (Two flavors)">6-pack (Two flavors)</option>
+                <option value="12-pack (Three flavors)">12-pack (Three flavors)</option>
+                <option value="none">None </option>
             </select>
         </div>
         </div>
@@ -350,19 +350,19 @@ div#final-order{
         <br>
     <div id=bold>Which Flavors do you want?</div>
     <div>
-        <input type="checkbox" id="ALM" name="alm" value="ALM"/>
+        <input type="checkbox" name="flavor" value="Almond Butter Banana"/>
         <label for="ALM">Almond Butter Banana</label>
     </div>
     <div>
-        <input type="checkbox" id="CHO" name="cho" value="CHO"/>
+        <input type="checkbox" name="flavors" value="Choco Banana"/>
         <label for="CHO">Choco Banana  </label>
     </div>
     <div>
-        <input type="checkbox" id="CARR" name="carr" value="CARR"/>
+        <input type="checkbox"  name="flavors" value="Carrot Pecan"/>
         <label for="CARR">Carrot Pecan </label>
     </div>
     <div>
-        <input type="checkbox" id="HAZ" name="haz" value="HAZ"/>
+        <input type="checkbox"  name="flavors" value="Hazelnut Chocolate"/>
         <label for="HAZ">Hazelnut Chocolate </label>
     </div>
     <br>
@@ -451,12 +451,12 @@ div#final-order{
         </div>
     </div>
     <select name="double" id="double-cake-select">
-        <option value="Banana-cake">Banana Cake with Almond Butter "Caramel"</option>
-        <option value="Banana-cake">Banana Cake with Almond Butter "Caramel" + edible flowers</option>
-        <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting</option>
-        <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting + edible flowers</option>
-        <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting</option>
-        <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting + edible flowers</option>
+        <option value="Banana Cake with Almond Butter 'Caramel'">Banana Cake with Almond Butter 'Caramel'</option>
+        <option value="Banana Cake with Almond Butter 'Caramel' + edible flowers">Banana Cake with Almond Butter 'Caramel' + edible flowers</option>
+        <option value="Chocolate Cake with Chocolate Frosting">Chocolate Cake with Chocolate Frosting</option>
+        <option value="Chocolate Cake with Chocolate Frosting + edible flowers">Chocolate Cake with Chocolate Frosting + edible flowers</option>
+        <option value="Carrot Cake with 'Cream Cheese' Frosting">Carrot Cake with 'Cream Cheese' Frosting</option>
+        <option value="Carrot Cake with 'Cream Cheese' Frosting + edible flowers">Carrot Cake with 'Cream Cheese' Frosting + edible flowers</option>
         <option value="none">None</option>
     </select>
 </div>
@@ -469,12 +469,12 @@ div#final-order{
     </div>
 </div>
 <select name="triple" id="Triple-cake-select">
-    <option value="Banana-cake">Banana Cake with Almond Butter "Caramel"</option>
-    <option value="Banana-cake">Banana Cake with Almond Butter "Caramel" + edible flowers</option>
-    <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting</option>
-    <option value="Chocolate-cake">Chocolate Cake with Chocolate Frosting + edible flowers</option>
-    <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting</option>
-    <option value="Carrot-cake">Carrot Cake with "Cream Cheese" Frosting + edible flowers</option>
+    <option value="Banana Cake with Almond Butter 'Caramel'">Banana Cake with Almond Butter 'Caramel'</option>
+    <option value="Banana Cake with Almond Butter 'Caramel' + edible flowers">Banana Cake with Almond Butter 'Caramel' + edible flowers</option>
+    <option value="Chocolate Cake with Chocolate Frosting">Chocolate Cake with Chocolate Frosting</option>
+    <option value="Chocolate Cake with Chocolate Frosting + edible flowers">Chocolate Cake with Chocolate Frosting + edible flowers</option>
+    <option value="Carrot Cake with 'Cream Cheese' Frosting">Carrot Cake with "Cream Cheese" Frosting</option>
+    <option value="Carrot Cake with 'Cream Cheese' Frosting + edible flowers">Carrot Cake with 'Cream Cheese' Frosting + edible flowers</option>
     <option value="none">None</option>
 </select>
 </div>
@@ -557,16 +557,16 @@ placeholder="Enter your message here..."></textarea>
 </div>
         </div>
             </fieldset>
-        </form> 
         <br>
         <br>
         <div id="final-order">
             <label>
             Your final order: 
             <br>
-              <textarea cols="60" name="message" rows="8" readonly></textarea>
+              <textarea cols="60" name="result" rows="8" readonly></textarea>
             </label>
           </div>
+        </form> 
         <br>
         <br> 
 <div id=buttons>
@@ -598,30 +598,30 @@ event.target.style.background = '';  //the background will turn back to white
 
 function displayOrder() {
     const fullName = form.name.value;
+    console.log(fullName)
         const addressOne = form.address.value;
         const city = form.city.value;
         const region = form.region.value;
         const phone = form.phone.value;
         const email = form.email.value;
         const packs = form.packs.value;
-        const flavorOne = form.alm.value;
-        const flavorTwo = form.cho.value;
-        const flavorThree = form.carr.value;
-        const flavorFour = form.haz.value;
+        // const flavors = form.flavors.value;
         const doubleCake = form.double.value;
         const tripleCake = form.triple.value;
-        
-        
         if (fullName === "" || addressOne === "" || city === "" || region === "" || phone === "" || email === "" ) {
           alert("You did not finish the form yet!");
         } else if (isNaN(phone)) {
           alert("You did not enter a valid phone number!");
         } else {
-            let message = document.querySelector("message");
-          
-            message = "Muffin quantity:" + packs + "\nMuffin Flavors: " + flavorOne + flavorTwo + flavorThree + flavorFour + "\nCakes: " + doubleCake + tripleCake;
-          
-
+            let flavorSelections;
+            const flavors = form["flavors"];
+        for (let i = 0; i < flavors.length; i++) {
+          if (flavors[i].checked) {
+            flavorSelections += flavors[i].value;
+          } 
+        }
+        message = "Muffin quantity:   " + packs + "\nMuffin Flavors:  " + flavorSelections + "\nDouble Cake: " + doubleCake + "\nTrible Cake: " + tripleCake;
+            
           form.result.value = message;
         }
       }
