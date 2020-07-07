@@ -118,17 +118,13 @@ li a:hover {
 #original-form{
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 50%;
     font-family: "ABeeZee";
     color: white;
+    margin-bottom: 40px;
+
 }
-#form-2{
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    font-family: "ABeeZee";
-    color: white;
-}
+
 fieldset{
     border-width: 4px;
     border-color: white;
@@ -158,11 +154,11 @@ footer {
     }
   
     #message{
-        font-family: "ABeeZee"
+        font-family: "ABeeZee";
     }
     #buttons{
         text-align: center;
-        font-family: "ABeeZee";
+        margin-bottom: 50px;
        
     }
     .dropdown {
@@ -210,17 +206,50 @@ footer {
 #textareaorder{
     margin-left: auto;
     margin-right: auto;
-    float: center;
     display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
     
 }
-div#final-order{
+#final-order{
     text-align: center;
     font-family: "ABeeZee";
     font-weight: bold;
     font-size: xx-large;
     color: #005365;
     
+}
+#bankaccount{
+    width: 640px;
+    height: 548px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: bold;
+    border-color: white;
+    border-width: 5px;
+}
+#deposit-title{
+    color: #005365;
+    font-family: "ABeeZee";
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 38px;
+}
+#deposit-text{
+    color: white;
+    font-family: "ABeeZee";
+    font-size: large;
+    text-align: center;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
     </style>
 </head>
@@ -233,18 +262,18 @@ div#final-order{
       <ul id="navbar">
         <li><a class="active" href="index.html">Home</a></li>
         <div class="dropdown">
-          <div class="dropbtn">Menu
+          <div class="dropbtn">
+            Menu
             <i class="fa fa-caret-down"></i>
           </div>
           <div class="dropdown-content">
             <a href="muffins.html">Muffins</a>
             <a href="cakes.html">Cakes</a>
           </div>
-        </div> 
-      
-        <li><a href="order.html">Order</a></li>
+        </div>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="aboutus.html">About </a></li>
+        <li><a href="order.html">Shop</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       
@@ -558,22 +587,27 @@ placeholder="Enter your message here..."></textarea>
         </div>
             </fieldset>
         <br>
-        <br>
         <div id="final-order">
             <label>
             Your final order: 
-            <br>
-              <textarea cols="60" name="result" rows="8" readonly></textarea>
+              <textarea id="textareaorder" cols="60" name="result" rows="8" readonly></textarea>
             </label>
-          </div>
+        </div>
         </form> 
-        <br>
-        <br> 
 <div id=buttons>
     <input type="submit" value="Submit" name="submit" id="submit-btn"/>
     <input type="reset" value="Reset" name="reset" />
    </div>
-    <br>
+   <p id="deposit-title">Make Your Payment</p>
+   <p id="deposit-text">To finalize your order, make your deposit to the bank account below and send us a confirmation 
+       of the transfer to +502 4632-0727. You can also send us a direct message on Instagram to @360.kitchen.
+   </p>
+    <img
+        src="images/bankaccount.jpg"
+        alt="bankaccount"
+        title="bankaccount"
+        id="bankaccount"
+      />
  
     <footer>
         <div id="headingfooter">360 Kitchen</div>
@@ -620,7 +654,7 @@ function displayOrder() {
             flavorSelections += flavors[i].value;
           } 
         }
-        message = "Muffin quantity:   " + packs + "\nMuffin Flavors:  " + flavorSelections + "\nDouble Cake: " + doubleCake + "\nTrible Cake: " + tripleCake;
+        message = "Muffin quantity:   " + packs + "\nMuffin Flavors:  " + flavorSelections + "\nDouble Cake: " + doubleCake + "\nTriple Cake: " + tripleCake;
             
           form.result.value = message;
         }

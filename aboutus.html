@@ -116,30 +116,42 @@
         background-color: #54a4a5;
         color: white;
       }
+    
       #california {
-        width: 413px;
+        width: 415px;
         height: 552px;
+        border-width: 4px;
+        border-color: #8FCCDF;
+        border-style: dotted;
       }
       #rainbow {
-        width: 413px;
+        width: 415px;
         height: 552px;
+        border-width: 4px;
+        border-color: #164267;
+        border-style: dotted
       }
       #tikal {
-        width: 413px;
+        width: 415px;
         height: 552px;
+        border-width: 4px;
+        border-color: #54a4a5;
+        border-style: dotted;
       }
       div.center {
-        width: 1250px;
+        width: 1290px;
         margin-left: auto;
         margin-right: auto;
       }
       #story {
         width: 1436px;
         height: 392px;
+        margin-top: 100px;
       }
       #mission {
         width: 1436px;
         height: 392px;
+  
       }
 
       #headingfooter {
@@ -200,7 +212,7 @@
         animation-name: slidein;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-        color: white;
+        color: #005365;
         font-family: "ABeeZee";
       }
       @keyframes slidein {
@@ -213,6 +225,46 @@
           margin-left: 0%;
           width: 100%;
         }
+      }
+      div.class{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #quoteone{
+        width: 473px;
+        height: 473px;
+      }
+      #quotetwo{
+        width: 473px;
+        height: 473px;
+      }
+      #quotethree{
+        width: 473px;
+        height: 473px;
+      }
+      #storyone{
+        width: 350px;
+        height: 550px;
+      }
+      #storytwo{
+        width: 350px;
+        height: 550px;
+        
+      }
+      #storythree{
+        width: 350px;
+        height: 550px;
+        
+      }
+      #storyfour{
+        width: 350px;
+        height: 550px;
+        
+      }
+      div.stories{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
       }
     </style>
   </head>
@@ -243,13 +295,14 @@
           <a href="cakes.html">Cakes</a>
         </div>
       </div>
-
-      <li><a href="order.html">Order</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="aboutus.html">About </a></li>
+      <li><a href="order.html">Shop</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-
+   
+    <h2 id="mission-text">~ Dare to live your life at 360 degrees ~</h2>
+   
     <div class="center">
       <img
         src="images/rainbow.png"
@@ -265,20 +318,61 @@
       />
       <img src="images/tikal.png" alt="tikal" title="tikal" id="tikal" />
     </div>
-    <br />
-    <h2 id="mission-text">~ Dare to live your life at 360 degrees ~</h2>
-    <br />
     <img src="images/story.png" alt="story" title="story" id="story" />
-    <br />
-    <br />
+    <br>
+    <img
+        src="images/storyone.jpg"
+        alt="storyone"
+        title="storyone"
+        id="storyone"
+      />
+      <img
+      src="images/storytwo.jpg"
+      alt="storytwo"
+      title="storytwo"
+      id="storytwo"
+    />
+    <img
+    src="images/storythree.jpg"
+    alt="storythree"
+    title="storythree"
+    id="storythree"
+  />
+  <img
+  src="images/storyfour.jpg"
+  alt="storyfour"
+  title="storyfour"
+  id="storyfour"
+/>
+  
     <img
       src="images/mymission.png"
       alt="mission"
       title="mission"
       id="mission"
     />
-    <br />
-    <br />
+    <div class="quotes">
+      <img
+      src="images/quoteone.png"
+      alt="quoteone"
+      title="quoteone"
+      id="quoteone"
+    />
+    <img
+    src="images/quotetwo.png"
+    alt="quotetwo"
+    title="quotetwo"
+    id="quotetwo"
+  />
+  <img
+  src="images/quotethree.png"
+  alt="quotethree"
+  title="quotethree"
+  id="quotethree"
+/>
+    </div>
+   
+  
     <footer>
       <div id="headingfooter">360 Kitchen</div>
       <a href="mailto:360kitchenandliving@gmail.com"
@@ -287,6 +381,81 @@
       <br />
       <a href="sitemap.html">Sitemap</a>
     </footer>
+    <script>
+      const slidesOne = [
+        "images/rainbow.png",
+        "images/california.png",
+        "images/tikal.png"
+      ];
+      const slidesTwo = [
+        "images/california.png",
+        "images/tikal.png",
+        "images/rainbow.png"
+      ];
+      const slidesThree = [
+        "images/tikal.png",
+        "images/rainbow.png",
+        "images/california.png"
+      ];
+      
+      const rainbowImage= document.getElementById("rainbow");
+      const californiaImage = document.getElementById("california");
+      const tikalImage = document.getElementById("tikal");
+      
+
+      const colorsOne = ["#8FCCDF", "#164267", "#54a4a5"];
+      const colorsTwo = ["#54a4a5", "#8FCCDF", "#164267"];
+      const colorsThree = ["#164267", "#54a4a5", "#8FCCDF"];
+      
+
+      let i = 0;
+      let j = 0;
+      let k = 0;
+
+      //Rainbow Slide Show
+      function slideShowOne() {
+        if (i === slidesOne.length) {
+          i = 0;
+        }
+        rainbowImage.src = slidesOne[i];
+        rainbowImage.style.borderColor = colorsOne[i];
+        i = i + 1;
+
+        setTimeout(slideShowOne, 2500);
+      }
+
+      document.addEventListener("DOMContentLoaded", slideShowOne);
+
+      //California Slide Show
+
+      function slideShowTwo() {
+        if (j === slidesTwo.length) {
+          j = 0;
+        }
+        californiaImage.src = slidesTwo[j];
+        californiaImage.style.borderColor = colorsTwo[j];
+        j = j + 1;
+
+        setTimeout(slideShowTwo, 2500);
+      }
+
+      document.addEventListener("DOMContentLoaded", slideShowTwo);
+
+      function slideShowThree() {
+        if (k === slidesThree.length) {
+          k = 0;
+        }
+        tikalImage.src = slidesThree[k];
+        tikalImage.style.borderColor = colorsThree[k];
+        k = k + 1;
+
+        setTimeout(slideShowThree, 2500);
+      }
+
+      document.addEventListener("DOMContentLoaded", slideShowThree);
+
+     
+    </script>
 
     <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
     of this work. -->

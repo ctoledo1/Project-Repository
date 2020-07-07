@@ -126,6 +126,7 @@
       width: 70%;
       font-family: "ABeeZee";
       color: white;
+      text-align: center;
     }
     fieldset {
       border-width: 4px;
@@ -206,15 +207,35 @@
       margin-left: auto;
       margin-right: auto;
       display: block;
-  
+      margin-bottom: 40px;
     }
-  
-  
-    h2{
-      color: white;
+
+    h2 {
+      color: #005365;
       font-family: "ABeeZee";
       text-align: center;
     }
+    #mission-text {
+        animation-duration: 7s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        color: #005365;
+        font-family: "ABeeZee";
+        font-size: x-large;
+        font-weight: bolder;
+      }
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
   </style>
   <body>
     <div class="header">
@@ -232,7 +253,7 @@
       />
     </div>
 
-    <ul id="navbar">
+     <ul id="navbar">
       <li><a class="active" href="index.html">Home</a></li>
       <div class="dropdown">
         <div class="dropbtn">
@@ -244,14 +265,14 @@
           <a href="cakes.html">Cakes</a>
         </div>
       </div>
-
-      <li><a href="order.html">Order</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="aboutus.html">About </a></li>
+      <li><a href="order.html">Shop</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-
-    <br />
+  
+    <p id="mission-text">~ Want your own cake flavor? Let us know! ~</p>
+    
 
     <form id="original-form">
       <fieldset>
@@ -261,7 +282,7 @@
           type="text"
           id="Name"
           name="name"
-          maxlength="100"
+          maxlength="150"
           placeholder="Enter your name here"
         />
         <br />
@@ -269,8 +290,8 @@
         <input
           type="text"
           id="Email adress"
-          name="Email"
-          maxlength="100"
+          name="email"
+          maxlength="150"
           placeholder="Enter your email adress here"
         />
         <br />
@@ -282,7 +303,7 @@
             <textarea
               id="message"
               name="comments"
-              rows="5"
+              rows="10"
               columns="25"
               placeholder="Enter your message here..."
             ></textarea>
@@ -299,7 +320,7 @@
             <label for="updates">Sign me up for email updates</label>
           </div>
           <br />
-          <input type="submit" value="Submit" name="submit" />
+          <input type="submit" value="Submit" name="submit" id="submit-btn" />
           <input type="reset" value="Reset" name="reset" />
         </div>
       </fieldset>
@@ -307,9 +328,8 @@
     <br />
     <h2>Because your coffee tastes better with...</h2>
 
-      <img src="images/coffee.jpg" alt="coffee" title="coffee" id="mug"/>
- 
-    
+    <img src="images/coffee.jpg" alt="coffee" title="coffee" id="mug" />
+
     <footer>
       <div id="headingfooter">360 Kitchen</div>
       <a href="mailto:360kitchenandliving@gmail.com"
@@ -332,26 +352,27 @@
         event.target.style.background = ""; //the background will turn back to white
       });
 
-//change image of mug 
-      function changeImage(mug) { //mouseover
+      //change image of mug
+      function changeImage(mug) {
+        //mouseover
         let coffeeMug = document.getElementById(mug);
         coffeeMug.src = "images/cakeslice.jpg";
         coffeeMug.style.borderColor = "#8FCCDF";
-       
+
         let h = document.querySelector("h2");
         h.innerText = "...a slice of 360 Kitchen cake!";
-
       }
 
       document.getElementById("mug").onmouseover = function () {
         changeImage("mug");
       };
 
-      function changeImageBack(mug) { //mouseout
+      function changeImageBack(mug) {
+        //mouseout
         let coffeeMug = document.getElementById(mug);
         coffeeMug.src = "images/coffee.jpg";
         coffeeMug.style.borderColor = "#638cb7";
-       
+
         let h = document.querySelector("h2");
         h.innerText = "Because your coffee tastes better with...";
       }
@@ -359,6 +380,24 @@
       document.getElementById("mug").onmouseout = function () {
         changeImageBack("mug");
       };
+
+      //validate form
+
+      function validateForm() {
+        const fullName = form.name.value;
+        const email = form.email.value;
+        const comments = form.comments.value;
+       
+        if (
+          fullName === "" ||
+          email === "" ||
+          comments === ""
+        ) {
+          alert("You did not finish the form yet!");
+        } 
+      }
+
+      document.getElementById("submit-btn").onclick = validateForm;
     </script>
     <!-- I, Cristina Toledo, pledge my honor that I have neither received nor provided unauthorized assistance during the completion 
     of this work. -->
