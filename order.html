@@ -350,20 +350,20 @@ div#final-order{
         <br>
     <div id=bold>Which Flavors do you want?</div>
     <div>
-        <input type="checkbox" id="ALM" name="flavors" value="ALM"/>
+        <input type="checkbox" id="ALM" name="alm" value="ALM"/>
         <label for="ALM">Almond Butter Banana</label>
     </div>
     <div>
-        <input type="checkbox" id="CHO" name="flavors" value="CHO"/>
-        <label for="CHO">Choco Banana Muffin </label>
+        <input type="checkbox" id="CHO" name="cho" value="CHO"/>
+        <label for="CHO">Choco Banana  </label>
     </div>
     <div>
-        <input type="checkbox" id="CARR" name="flavors" value="CARR"/>
-        <label for="CARR">Carrot Pecan Muffin</label>
+        <input type="checkbox" id="CARR" name="carr" value="CARR"/>
+        <label for="CARR">Carrot Pecan </label>
     </div>
     <div>
-        <input type="checkbox" id="HAZ" name="flavors" value="HAZ"/>
-        <label for="HAZ">Hazelnut Chocolate Muffin</label>
+        <input type="checkbox" id="HAZ" name="haz" value="HAZ"/>
+        <label for="HAZ">Hazelnut Chocolate </label>
     </div>
     <br>
     <div>
@@ -564,7 +564,7 @@ placeholder="Enter your message here..."></textarea>
             <label>
             Your final order: 
             <br>
-              <textarea cols="60" name="result" rows="8" readonly></textarea>
+              <textarea cols="60" name="message" rows="8" readonly></textarea>
             </label>
           </div>
         <br>
@@ -604,7 +604,10 @@ function displayOrder() {
         const phone = form.phone.value;
         const email = form.email.value;
         const packs = form.packs.value;
-        const flavors = form.flavors.value;
+        const flavorOne = form.alm.value;
+        const flavorTwo = form.cho.value;
+        const flavorThree = form.carr.value;
+        const flavorFour = form.haz.value;
         const doubleCake = form.double.value;
         const tripleCake = form.triple.value;
         
@@ -614,10 +617,10 @@ function displayOrder() {
         } else if (isNaN(phone)) {
           alert("You did not enter a valid phone number!");
         } else {
-            let message;
-          if (form["flavors"].checked) {
-            message = "Muffin quantity:" + packs + "\nMuffin Flavors: " + flavors + "\nCake: " + doubleCake + tripleCake;
-          } 
+            let message = document.querySelector("message");
+          
+            message = "Muffin quantity:" + packs + "\nMuffin Flavors: " + flavorOne + flavorTwo + flavorThree + flavorFour + "\nCakes: " + doubleCake + tripleCake;
+          
 
           form.result.value = message;
         }
