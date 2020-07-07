@@ -96,13 +96,7 @@
         color: white;
       }
 
-      #menuimage {
-        width: 471px;
-        height: 927px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
+     
       #headingfooter {
         font-family: "bebas neue";
         font-size: xx-large;
@@ -189,6 +183,11 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        border-color: white;
+        border-style: bold;
+        border-width: 5px;
+        float: center;
+
 
       }
       #favorite{
@@ -207,9 +206,48 @@
         font-family: "ABeeZee";
         text-align: center;
       }
-      .muffin-hands{
+     
+      #muffin-left{
+        margin-left: 0px;
         height: 400px;
         width: 400px;
+        display: block;
+        float: left;
+  
+      }
+     
+      #muffin-left-choco{
+        margin-left: 0px;
+        height: 400px;
+        width: 400px;
+        display: block;
+        float: left;
+        padding-left: 0px;
+        
+      }
+      #menuimage {
+        width: 471px;
+        height: 927px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: center;
+      }
+      #muffin-right-choco{
+        margin-right: 0px;
+        height: 400px;
+        width: 400px;
+        display: block;
+        float: right;
+        
+      }
+      #muffin-right{
+        margin-right: 0px;
+        height: 400px;
+        width: 400px;
+        display: block;
+        float: right;
+        
       }
     </style>
   </head>
@@ -271,39 +309,52 @@
       title="hazelnut-chocolate"
       id="hazelnut-chocolate"
     />
-    <br>
+<br>
+<br>
   <img
   src="images/muffinleft.png"
-  alt="menuimage"
-  title="menuimage"
-  class="muffin-hands"
+  alt="carrot-muffin"
+  title="carrot-muffin"
+  id="muffin-left"
 />
+
     <img
       src="images/muffinleftchoco.png"
-      alt="menuimage"
-      title="menuimage"
-      class="muffin-hands"
+      alt="choco-muffin"
+    title="choco-muffin"
+      id="muffin-left-choco"
     />
-    <br>
-    <img
-    src="images/menuimage.png"
-    alt="menuimage"
-    title="menuimage"
-    id="menuimage"
-  />
-  <br>
-    <img
-    src="images/muffinrightchoco.png"
-    alt="menuimage"
-    title="menuimage"
-    class="muffin-hands"
-  />
-  <img
-  src="images/muffinright.png"
-  alt="menuimage"
-  title="menuimage"
-  class="muffin-hands"
-/>
+   
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
     <h1 id="favorite">My favorite flavor is definitely...</h1> 
     <form action="" method="post" id="my-form">
       <label><input type="radio" name="flavors" value="images/almond-butter-banana"/>Almond Butter Banana</label>
@@ -435,7 +486,7 @@ function selectFlavor() {
 
     if (flavors[i].checked) {
       userChoice = flavors[i].value;
-      document.querySelector("question").src  = "images/"
+      document.querySelector("question-img").src  = "images/almondmuffintwo"
     }
   }
 }
